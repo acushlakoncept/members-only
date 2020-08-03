@@ -8,8 +8,8 @@
         <% @posts.each do |post|%>
             <div class="card my-3">
             <div class="card-header">
-                <strong><%= post.title %></strong> <% if member_signed_in? %> 
-                <small><em>by <%= post.member.name %></em></small> <% end %>
+                <strong><%= post.title %></strong> 
+                <%= show_author_name(post) %>
             </div>
             <div class="card-body">
                 <p class="card-text"><%= post.body %></p>

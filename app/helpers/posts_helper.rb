@@ -7,6 +7,12 @@ module PostsHelper
       end
       out.html_safe
     end
+
+    def show_author_name(post)
+        out = ''
+        if member_signed_in?
+            out << "<small><em>by #{post.member.name} </em></small>"
+        end
+        out.html_safe
+    end
 end
-
-
