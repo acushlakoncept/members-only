@@ -1,1 +1,13 @@
-<h1>Ya! we are here!</h1>
+<% @posts.each do |post|%>
+    <div class="card">
+    <div class="card-header">
+        <%= post.title %>
+    </div>
+    <div class="card-body">
+        <p class="card-text"><%= post.body %></p>
+    </div>
+    <div class="card-footer">author</div>
+    </div>
+<% end %>
+
+
