@@ -1,13 +1,30 @@
-<% @posts.each do |post|%>
-    <div class="card">
-    <div class="card-header">
-        <%= post.title %>
+<div class="container">
+  <div class="row mt-3">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <h3>Recent Posts 
+        <% if member_signed_in? %>
+        <span class="float-right btn btn-outline-secondary">
+        <%= link_to  "Create Post", new_post_path %></span>
+        <% else %>
+            <span class="float-right btn btn-outline-secondary">
+            <%= link_to  "Sign in", member_session_path %></span>
+        <% end %>
+        </h3>
+        <% @posts.each do |post|%>
+            <div class="card my-3">
+            <div class="card-header">
+                <strong><%= post.title %></strong> <% if member_signed_in? %> 
+                <small><em>by <%= post.member.name %></em></small> <% end %>
+            </div>
+            <div class="card-body">
+                <p class="card-text"><%= post.body %></p>
+            </div>
+        
+            </div>
+        <% end %>
     </div>
-    <div class="card-body">
-        <p class="card-text"><%= post.body %></p>
-    </div>
-    <div class="card-footer">author</div>
-    </div>
-<% end %>
-
+    <div class="col-md-3"></div>
+  </div>
+</div>
 
