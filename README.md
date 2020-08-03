@@ -8,4 +8,9 @@ In this project, we built an exclusive clubhouse app where members can write emb
     name, email, password, member-status
 
 posts :
-    title, body, member_id -->
+    title, body, member_id 
+    
+    add member_status to devise member table and set default to true
+    create views
+    
+    -->
