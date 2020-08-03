@@ -16,3 +16,5 @@ module PostsHelper
         out.html_safe
     end
 end
+
+
