@@ -12,6 +12,12 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    <span class="btn btn-outline-secondary">
+      <%= link_to  "Sign in", member_session_path %>
+    </span>
+    <span class="btn btn-outline-secondary">
+      <%= link_to "Sign out", destroy_member_session_path, method: :delete, class: "btn btn-outline-danger" %>
+    </span>
     <%= yield %>
   </body>
 </html>

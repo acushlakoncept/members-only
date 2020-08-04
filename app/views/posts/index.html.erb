@@ -4,13 +4,7 @@
     <div class="col-md-6">
         <h3>Recent Posts 
         <% if member_signed_in? %>
-        
         <%= link_to  "Create Post", new_post_path, class: "float-right mr-2 btn btn-outline-secondary" %>
-         <%= link_to "Log out", destroy_member_session_path, method: :delete, class: "float-right  btn btn-outline-danger" %>
-        
-        <% else %>
-            <span class="float-right btn btn-outline-secondary">
-            <%= link_to  "Sign in", member_session_path %></span>
         <% end %>
         </h3>
         <% @posts.each do |post|%>
